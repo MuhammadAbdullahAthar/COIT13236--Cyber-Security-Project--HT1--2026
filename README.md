@@ -12,9 +12,11 @@ Do not use these files, scripts, packet captures, or tool workflows against publ
 
 ## Project Focus
 
-This repository is focused on packet-level IoT security analysis, IPv6/RPL traffic inspection, replay-risk review, routing attack analysis, and authorized tool preparation. It does not include Minan's operational Cooja setup, simulation-startup, topology, environment setup, or availability-testing files.
+This repository is focused on packet-level IoT security analysis, IPv6/RPL traffic inspection, replay-risk review, routing attack analysis, and authorized tool preparation.
 
-Abdullah's contribution covers:
+## Work Completed
+
+Muhammad Abdullah Athar completed the packet security and penetration-testing analysis work, including:
 
 - packet analysis
 - Wireshark traffic inspection
@@ -27,6 +29,21 @@ Abdullah's contribution covers:
 - routing attack analysis
 - replay-risk analysis
 - sinkhole and selective forwarding analysis
+
+Md Al Shariar Minan completed the Cooja operational testing and simulation environment work, including:
+
+- Contiki-NG and Cooja setup
+- simulation startup
+- topology preparation
+- Radio Messages observation
+- Timeline observation
+- Mote Output review
+- flood attack operation
+- node failure testing
+- blackhole operational testing
+- environment setup and availability analysis
+
+Only Abdullah's packet security and penetration-testing files are stored in this repository. Minan's operational Cooja setup and simulation files belong in Minan's separate repository.
 
 ## Repository Structure
 
@@ -107,4 +124,4 @@ They are intended for module search, syntax review, and controlled testing again
 
 ## Responsibility Split
 
-This repository is intentionally limited to Abdullah's packet security and penetration-testing analysis scope. Cooja startup, topology, Radio Messages, Timeline, Mote Output, flood attack operation, node failure operation, blackhole operational testing, and environment setup files are excluded because they belong to Minan's separate project scope.
+The same lab environment and packet capture were used for both parts of the project, but the responsibilities are different. Abdullah's work focuses on packet security, traffic inspection, replay risk, routing analysis, and penetration-testing tools. Minan's work focuses on Cooja simulation operation, topology, node failure, flooding, blackhole behavior, and availability analysis.
