@@ -1,107 +1,75 @@
-# COIT13236 Cyber Security Project - IoT Penetration Testing
+# COIT13236 Cyber Security Project - IoT Packet Security Analysis
 
-Student: Muhammad Abdullah Athar
+Name: Muhammad Abdullah Athar
 
-This repository contains the Student 1 IoT penetration testing project evidence and lab files that were already present in `Final_IoT_Project`.
+This repository contains Abdullah's IoT packet security analysis and penetration-testing preparation files from the authorized Contiki-NG/Cooja lab environment.
 
 ## Disclaimer
 
 This project is for educational and authorized laboratory testing only.
 
-No public systems, client systems, or third-party networks should be tested with these materials. Any replay, authentication testing, exploit module review, packet capture, or flooding simulation must remain inside an approved laboratory environment.
+Do not use these files, scripts, packet captures, or tool workflows against public systems, client systems, or any network outside an approved lab scope.
 
-## Project Overview
+## Project Focus
 
-The project demonstrates an authorized IoT security lab workflow using Contiki-NG, Cooja, IPv6/6LoWPAN traffic, RPL routing behavior, packet analysis, and controlled penetration testing preparation. The repository preserves the available evidence files without creating fake screenshots, fake packet captures, fake logs, or artificial test output.
+This repository is focused on packet-level IoT security analysis, IPv6/RPL traffic inspection, replay-risk review, routing attack analysis, and authorized tool preparation. It does not include Minan's operational Cooja setup, simulation-startup, topology, environment setup, or availability-testing files.
+
+Abdullah's contribution covers:
+
+- packet analysis
+- Wireshark traffic inspection
+- tshark filtering
+- tcpdump capture workflow
+- Scapy replay analysis preparation
+- Metasploit module search for authorized lab services
+- Hydra authentication-testing syntax review
+- IPv6 and RPL inspection
+- routing attack analysis
+- replay-risk analysis
+- sinkhole and selective forwarding analysis
 
 ## Repository Structure
 
 | Folder | Contents |
 | --- | --- |
-| `cooja-simulations/` | Cooja simulation file for the IoT lab topology. |
-| `pcaps/` | Existing packet capture evidence from the lab. |
-| `commands/` | Command notes and environment check outputs. |
-| `scripts/` | Helper scripts for authorized lab-only packet analysis, replay preparation, Hydra syntax review, and Metasploit module search. |
-| `reports/` | Existing verification and status reports. |
-| `docs/` | Cooja layout and file inventory notes. |
-| `references/` | Existing reference/search output files from the project folder. |
-| `screenshots/` | Placeholder folder. No screenshot image files were present in the supplied Student 1 project folder. |
+| `reports/` | Abdullah's progress report and existing lab verification output. |
+| `pcaps/` | Shared lab packet capture used for packet inspection and routing analysis. |
+| `scripts/` | Scapy, Metasploit, Hydra, Wireshark, tshark, and tcpdump helper files. |
+| `commands/` | Existing command workflow notes for the authorized lab. |
+| `docs/` | Reserved for Abdullah-specific documentation. |
+| `references/` | Reserved for Abdullah-specific references. |
 
-## IoT Penetration Testing Scope
+## Evidence Files
 
-The lab focuses on IoT penetration testing concepts in a controlled environment. The available material covers reconnaissance, traffic capture, packet inspection, routing behavior review, and preparation for attack simulations. Testing activities are framed as authorized laboratory exercises, not real-world exploitation.
+The repository contains only Abdullah-scoped files from the supplied project folder:
 
-## Contiki-NG and Cooja
+- `reports/Week9_Progress_Report_Abdullah.docx`
+- `reports/live_verification_status.txt`
+- `pcaps/rpl_udp_final_raw.pcap`
+- `commands/final_iot_workflow_commands.txt`
+- `scripts/scapy_replay_lab.py`
+- `scripts/metasploit_iot_search.rc`
+- `scripts/hydra_ready.sh`
+- `scripts/tcpdump_ready.sh`
+- `scripts/tshark_ready.sh`
+- `scripts/launch_wireshark_when_pcap_ready.sh`
+- `scripts/verify_pcap_when_ready.sh`
 
-Contiki-NG is used for low-power IoT networking research and simulation. Cooja provides the simulated mote environment used to model the IPv6/6LoWPAN network and observe radio, routing, and UDP behavior. The simulation file is stored in:
+## Packet Analysis
 
-`cooja-simulations/IoT_Week9_Pentest.csc`
+The packet capture `pcaps/rpl_udp_final_raw.pcap` is the primary evidence file for traffic inspection. It supports analysis of UDP, IPv6, ICMPv6, and RPL control traffic from the lab.
 
-The project notes indicate a Cooja workflow with a UDP server/sink mote, multiple UDP client motes, radio messages, mote output logs, timeline activity, and topology visualization.
+Useful display filters referenced by the workflow:
 
-## IPv6 Reconnaissance
-
-The packet capture and command notes include IPv6 and ICMPv6/RPL analysis. The lab workflow uses filters such as:
-
-```bash
+```text
 udp
 ipv6
 icmpv6
 ```
 
-These filters support reconnaissance of simulated IPv6 node communication, RPL control traffic, and UDP request/response behavior between motes.
+## Wireshark, tshark, and tcpdump
 
-## Packet Analysis
-
-The packet capture evidence is stored in:
-
-`pcaps/rpl_udp_final_raw.pcap`
-
-The existing report files show UDP, IPv6, and ICMPv6/RPL traffic examples. Analysis tools referenced in the project include Wireshark, tshark, and tcpdump. Supporting helper scripts are stored in `scripts/`.
-
-Example lab-only analysis command from the existing workflow:
-
-```bash
-tshark -r rpl_udp_final_raw.pcap -Y udp
-```
-
-## Routing Attacks
-
-The lab documentation references RPL routing attack concepts including routing instability, blackhole, selective forwarding, and sinkhole behavior. These are documented as Cooja-only exercises that require authorized malicious firmware variants and comparison of packet delivery and RPL control behavior.
-
-No new attack evidence has been created in this repository.
-
-## Flooding Simulations
-
-Flooding and HELLO flood simulations are documented as authorized Cooja-only activities. The workflow notes require the attack scenario to remain inside the lab and to be enabled only after scope approval.
-
-## Replay Preparation
-
-Replay preparation is represented by the existing Scapy helper file:
-
-`scripts/scapy_replay_lab.py`
-
-Replay activity must only use saved lab packet captures and approved lab interfaces. The repository does not include fabricated replay output.
-
-## Metasploit Testing
-
-Metasploit testing is represented by the existing resource command file:
-
-`scripts/metasploit_iot_search.rc`
-
-The file searches for CoAP and IPv6 modules and records that any module use must be limited to authorized lab services.
-
-## Hydra Authentication Testing
-
-Hydra authentication testing is represented by the existing helper script:
-
-`scripts/hydra_ready.sh`
-
-The script presents Hydra help and a placeholder syntax example. It does not select or attack a public target.
-
-## Wireshark, tshark, and tcpdump Analysis
-
-The project includes helper scripts for packet analysis readiness:
+The project includes helper scripts for opening or inspecting the lab packet capture with Wireshark, tshark, and tcpdump:
 
 ```text
 scripts/launch_wireshark_when_pcap_ready.sh
@@ -110,25 +78,33 @@ scripts/tcpdump_ready.sh
 scripts/verify_pcap_when_ready.sh
 ```
 
-These files support analysis of the existing lab capture and verification that packet data is available before inspection.
+These files support packet inspection only within the authorized lab context.
 
-## Evidence Inventory
+## IPv6 and RPL Inspection
 
-The repository contains only the files copied from the supplied Student 1 project folder plus this README and folder placeholders needed for repository organization.
+The lab capture and verification output include IPv6 and ICMPv6/RPL traffic. The analysis focuses on identifying RPL control behavior, UDP request/response traffic, and routing-related packet patterns that may indicate instability, selective forwarding, sinkhole behavior, or replay risk.
 
-Key evidence files:
+## Replay Analysis
 
-- `pcaps/rpl_udp_final_raw.pcap`
-- `cooja-simulations/IoT_Week9_Pentest.csc`
-- `reports/live_verification_status.txt`
-- `reports/status_now.txt`
-- `commands/final_iot_workflow_commands.txt`
-- `scripts/scapy_replay_lab.py`
-- `scripts/metasploit_iot_search.rc`
-- `scripts/hydra_ready.sh`
+Replay preparation is represented by:
 
-## Notes
+```text
+scripts/scapy_replay_lab.py
+```
 
-- No screenshot image files were present in the supplied Student 1 source folder.
-- No Student 2 material was copied.
-- No fake screenshots, packet captures, logs, or artificial evidence were created.
+Any replay testing must use saved lab captures and approved lab interfaces only.
+
+## Metasploit and Hydra
+
+Metasploit and Hydra files are included only as authorized lab preparation material:
+
+```text
+scripts/metasploit_iot_search.rc
+scripts/hydra_ready.sh
+```
+
+They are intended for module search, syntax review, and controlled testing against approved lab targets only.
+
+## Responsibility Split
+
+This repository is intentionally limited to Abdullah's packet security and penetration-testing analysis scope. Cooja startup, topology, Radio Messages, Timeline, Mote Output, flood attack operation, node failure operation, blackhole operational testing, and environment setup files are excluded because they belong to Minan's separate project scope.
