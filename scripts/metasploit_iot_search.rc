@@ -1,0 +1,4 @@
+workspace -a Final_IoT_Project
+search coap
+search ipv6
+notes -t workflow "Final IoT project lab demonstration only: review CoAP/IPv6 modules; do not run exploitation without explicit lab target selection."

@@ -1,0 +1,26 @@
+Final IoT penetration testing workflow - live lab only
+Project path: ~/Downloads/Final_IoT_Project/
+Simulation: IoT_Week9_Pentest.csc
+PCAP: rpl_udp_final_raw.pcap
+
+Cooja checks:
+- Confirm 1 UDP server/sink mote and 15 UDP client motes.
+- Confirm Radio Messages shows live IEEE 802.15.4 / 6LoWPAN frames.
+- Confirm Mote Output shows UDP client/server logs.
+- Confirm Timeline shows radio RX/TX activity.
+- Confirm Network/Visualizer shows topology and mote IDs.
+
+Wireshark display filters:
+udp
+ipv6
+icmpv6
+
+Terminal workflow, authorized lab only:
+- Packet sniffing: tshark -r rpl_udp_final_raw.pcap -Y udp
+- Routing instability: observe ICMPv6/RPL control traffic and parent changes in Cooja timeline/logs.
+- Node failure: stop/disable a client mote in Cooja and record routing recovery behavior.
+- Flood attack / HELLO flood: only run inside Cooja by enabling the prepared attacker mote/code variant after scope approval.
+- Blackhole / selective forwarding / sinkhole: only run inside Cooja by replacing a client mote firmware with the authorized malicious routing variant, then compare packet delivery and RPL control behavior.
+- Replay attack: use Scapy with the saved PCAP only inside the lab network/interface after confirming scope.
+- Metasploit: search coap; search ipv6; select modules only against authorized lab services.
+- Hydra: demonstrate syntax/capability only; do not run against client or public targets.
