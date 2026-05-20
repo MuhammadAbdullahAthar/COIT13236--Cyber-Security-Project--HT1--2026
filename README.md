@@ -1,8 +1,11 @@
 # COIT13236 Cyber Security Project - IoT Packet Security Analysis
 
-Name: Muhammad Abdullah Athar
+Names:
 
-This repository contains Abdullah's IoT packet security analysis and penetration-testing preparation files from the authorized Contiki-NG/Cooja lab environment.
+- Muhammad Abdullah Athar
+- Md Al Shariar Minan
+
+This repository contains the IoT packet security analysis, penetration-testing preparation, and Cooja simulation operation files from the authorized Contiki-NG/Cooja lab environment.
 
 ## Disclaimer
 
@@ -12,7 +15,7 @@ Do not use these files, scripts, packet captures, or tool workflows against publ
 
 ## Project Focus
 
-This repository is focused on packet-level IoT security analysis, IPv6/RPL traffic inspection, replay-risk review, routing attack analysis, and authorized tool preparation.
+This repository is focused on packet-level IoT security analysis, IPv6/RPL traffic inspection, replay-risk review, routing attack analysis, Cooja simulation operation, topology review, node failure testing, flooding behavior, and authorized tool preparation.
 
 ## Work Completed
 
@@ -43,7 +46,7 @@ Md Al Shariar Minan completed the Cooja operational testing and simulation envir
 - blackhole operational testing
 - environment setup and availability analysis
 
-Only Abdullah's packet security and penetration-testing files are stored in this repository. Minan's operational Cooja setup and simulation files belong in Minan's separate repository.
+Both packet-analysis evidence and Cooja operational-testing files are stored in this repository.
 
 ## Repository Structure
 
@@ -53,17 +56,24 @@ Only Abdullah's packet security and penetration-testing files are stored in this
 | `pcaps/` | Shared lab packet capture used for packet inspection and routing analysis. |
 | `scripts/` | Scapy, Metasploit, Hydra, Wireshark, tshark, and tcpdump helper files. |
 | `commands/` | Existing command workflow notes for the authorized lab. |
-| `docs/` | Reserved for Abdullah-specific documentation. |
-| `references/` | Reserved for Abdullah-specific references. |
+| `cooja-simulations/` | Cooja simulation file used for the IoT lab. |
+| `docs/` | Cooja layout and file inventory notes. |
+| `references/` | Existing reference/search output files from the lab. |
 
 ## Evidence Files
 
-The repository contains only Abdullah-scoped files from the supplied project folder:
+The repository contains the supplied project files:
 
 - `reports/Week9_Progress_Report_Abdullah.docx`
+- `reports/Week9_Progress_Report_Minan (1).docx`
 - `reports/live_verification_status.txt`
+- `reports/status_now.txt`
 - `pcaps/rpl_udp_final_raw.pcap`
+- `cooja-simulations/IoT_Week9_Pentest.csc`
 - `commands/final_iot_workflow_commands.txt`
+- `commands/ant_check.txt`
+- `commands/env_check.txt`
+- `commands/gui_check.txt`
 - `scripts/scapy_replay_lab.py`
 - `scripts/metasploit_iot_search.rc`
 - `scripts/hydra_ready.sh`
@@ -71,6 +81,10 @@ The repository contains only Abdullah-scoped files from the supplied project fol
 - `scripts/tshark_ready.sh`
 - `scripts/launch_wireshark_when_pcap_ready.sh`
 - `scripts/verify_pcap_when_ready.sh`
+- `docs/cooja_files.txt`
+- `docs/cooja_layout.txt`
+- `references/arg_search.txt`
+- `references/plugin_search.txt`
 
 ## Packet Analysis
 
@@ -100,6 +114,16 @@ These files support packet inspection only within the authorized lab context.
 ## IPv6 and RPL Inspection
 
 The lab capture and verification output include IPv6 and ICMPv6/RPL traffic. The analysis focuses on identifying RPL control behavior, UDP request/response traffic, and routing-related packet patterns that may indicate instability, selective forwarding, sinkhole behavior, or replay risk.
+
+## Cooja Simulation and Operational Testing
+
+The Cooja simulation file is stored in:
+
+```text
+cooja-simulations/IoT_Week9_Pentest.csc
+```
+
+The Cooja work covers simulation startup, topology review, Radio Messages, Timeline, Mote Output, node failure behavior, flooding operation, blackhole operational testing, and environment setup checks.
 
 ## Replay Analysis
 

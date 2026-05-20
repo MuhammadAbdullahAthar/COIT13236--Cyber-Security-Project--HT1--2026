@@ -1,0 +1,22 @@
+java/org/contikios/cooja/interfaces/Mote2MoteRelations.java:105:      var args = msg.split(" ");
+java/org/contikios/cooja/interfaces/Mote2MoteRelations.java:106:      if (args.length != 3) {
+java/org/contikios/cooja/interfaces/Mote2MoteRelations.java:112:        destID = Integer.parseInt(args[1]);
+java/org/contikios/cooja/interfaces/Mote2MoteRelations.java:116:      String state = args[2];
+java/org/contikios/cooja/interfaces/MoteAttributes.java:148:    String[] args = att.split("=");
+java/org/contikios/cooja/interfaces/MoteAttributes.java:149:    if (args.length == 2) {
+java/org/contikios/cooja/interfaces/MoteAttributes.java:150:      attributes.put(args[0], args[1]);
+java/org/contikios/cooja/interfaces/MoteAttributes.java:151:    } else if (args.length == 1) {
+java/org/contikios/cooja/interfaces/MoteAttributes.java:152:      attributes.remove(args[0]);
+java/org/contikios/cooja/mote/memory/MemoryInterface.java:79:    MoteMemoryException(String message, Object... args) {
+java/org/contikios/cooja/mote/memory/MemoryInterface.java:80:      super(String.format(message, args));
+java/org/contikios/cooja/Cooja.java:1222:   * @param quick Do a quickstart.
+java/org/contikios/cooja/plugins/skins/AttributeVisualizerSkin.java:166:          String[] args = a.split(";");
+java/org/contikios/cooja/plugins/skins/AttributeVisualizerSkin.java:167:          color = parseAttributeColor(args[1]);
+java/org/contikios/cooja/plugins/skins/AttributeVisualizerSkin.java:168:          a = args[0];
+java/org/contikios/cooja/plugins/Mobility.java:127:      String[] args = line.split(" ");
+java/org/contikios/cooja/plugins/Mobility.java:128:      entriesList.add(new Move((long) (Double.parseDouble(args[1]) * 1000.0 * Simulation.MILLISECOND),
+java/org/contikios/cooja/plugins/Mobility.java:129:              Integer.parseInt(args[0]), // XXX Mote index, not ID.
+java/org/contikios/cooja/plugins/Mobility.java:130:              Double.parseDouble(args[2]), Double.parseDouble(args[3])));
+java/org/contikios/cooja/Main.java:90:  @Option(names = "--nashorn-args", paramLabel = "ARGS", description = "the Nashorn arguments")
+java/org/contikios/cooja/Main.java:160:  public static void main(String[] args) {
+java/org/contikios/cooja/Main.java:165:      commandLine.parseArgs(args);
