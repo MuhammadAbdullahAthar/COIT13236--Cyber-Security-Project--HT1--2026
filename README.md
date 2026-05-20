@@ -65,7 +65,7 @@ Both packet-analysis evidence and Cooja operational-testing files are stored in 
 The repository contains the supplied project files:
 
 - `reports/Week9_Progress_Report_Abdullah.docx`
-- `reports/Week9_Progress_Report_Minan (1).docx`
+- `reports/Week9_Progress_Report_Minan.docx`
 - `reports/live_verification_status.txt`
 - `reports/status_now.txt`
 - `pcaps/rpl_udp_final_raw.pcap`
